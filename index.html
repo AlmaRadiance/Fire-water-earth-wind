@@ -16,19 +16,30 @@
         <div class="popup-content">
             <span class="close-popup" onclick="closePopup()">&times;</span>
             <h2>Game Rules</h2>
-            <p>Welcome to the Elemental Adventure Game! In this game, you will face off against the computer in a battle of elements: Fire, Water, Earth, and Wind.</p>
-            <p>Here are the rules:</p>
+            <p>Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
+            <h3>Rules</h3>
+            <p>
+                In this mystical world, you possess the power of Fire, Water, Wind, and Earth. 
+                Brace yourself for epic battles against the computer!
+            </p>            
             <ul>
                 <li>Each player selects an element.</li>
                 <li>The computer will also randomly choose an element.</li>
                 <li>The winner is determined based on the elemental strengths and weaknesses.</li>
-                <li>The game consists of 5 rounds.</li>
-                <li>May the best element prevail!</li>
+                <li>Prepare for an epic contest spanning five rounds. Every selection, every move, will determine the course of the battle.</li>
+                <li>With every round, the stage is set for the ultimate victor. Choose your element wisely, for in this elemental saga, only the mightiest will triumph!</li>
+            </ul>
+            <h3>The Elements</h3>
+            <ul>
+                <li>Fire: Fierce and unyielding, Fire burns Wind but is extinguished by Water.</li>
+                <li>Water: Fluid and adaptable, Water douses Fire but is swept away by Wind.</li>
+                <li>Wind: Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</li>
+                <li>Earth: Steadfast and unyielding, Earth resists Wind but is eroded by Water.</li>
             </ul>
         </div>
     </div>
 
-    <div class="elements"></div>
+    <div class="elements">
         <div class="element" id="fire">
             <img src="./Images/fire.jpg" alt="Fire">
         </div>
@@ -56,10 +67,11 @@
                 <i class="fa-solid fa-bars"></i>              
                 Menu
             </button>
+
             <div class="dropdown-content">
-              <a href="#">Rules</a>
-              <a href="#">Scores</a>
-              <a href="#">Rounds</a>
+              <a id="rules-link" href="#">Rules</a>
+              <a id="scores-link" href="#">Scores</a>
+              <a id="rounds-link" href="#">Rounds</a>
             </div>
           </div>
           
