@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
     <title>Fire-Water-Earth-Wind</title>
+</head>
+ 
 
+
+<body>
+    <div id="popup-container" class="popup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <h2>Game Rules</h2>
+            <p>Welcome to the Elemental Adventure Game! In this game, you will face off against the computer in a battle of elements: Fire, Water, Earth, and Wind.</p>
+            <p>Here are the rules:</p>
+            <ul>
+                <li>Each player selects an element.</li>
+                <li>The computer will also randomly choose an element.</li>
+                <li>The winner is determined based on the elemental strengths and weaknesses.</li>
+                <li>The game consists of 5 rounds.</li>
+                <li>May the best element prevail!</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="elements"></div>
+        <div class="element" id="fire">
+            <img src="./Images/fire.jpg" alt="Fire">
+        </div>
+        <div class="element" id="water">
+            <img src="./Images/water.jpg" alt="Water">
+        </div>
+        <div class="element" id="wind">
+            <img src="./Images/wind.jpg" alt="Fire">
+        </div>
+        <div class="element" id="earth">
+            <img src="./Images/earth.jpg" alt="Fire">
+        </div>
+    </div>
+    
     <header>
         <h1> Welcome to the Elemental Adventure Game: <br> 
             <span class="fire">Fire</span> -
@@ -29,17 +65,30 @@
           
 
     </header>
-</head>
-
-
-<body>
+    
     <div class="start-button">  
-        <button class="main-button">
-            <i class="fa-light fa-gamepad"></i>
-            PLAY</button>
+        <button class="main-button" id="start-button">
+            <i class="material-icons-outlined">restart_alt</i>
+            PLAY
+        </button>
+    </div>
+    
+
+    <div class="game-container">
+        <h2 class="game-title">Player vs. Computer</h2>
+        <div class="icons">
+            <div class="player">
+                <i class="fa-solid fa-person fa-bounce"></i>
+            </div>
+            <div class="computer">
+                <i class="fa-solid fa-computer fa-bounce"></i>
+            </div>
+        </div>
     </div>
 
-    
+    <footer class="footer">
+        <p>the odin project</p>
+    </footer>
 
     <script src="./index.js"></script>     
 </body>
