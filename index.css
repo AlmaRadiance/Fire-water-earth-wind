@@ -238,6 +238,67 @@ h1 {
   }
 }
 
+
+
+/*Prompt*/
+.custom-prompt {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.prompt-content {
+  text-align: center;
+}
+
+#confirm-element {
+  margin-top: 10px;
+}
+
+
+.element-button {
+  border: none;
+  border-radius: 10px; 
+  background-color: #3498db; 
+  color: white;
+  font-size: 18px; 
+  padding: 10px 20px; 
+  margin: 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.element-button:hover {
+  background-color: #2980b9; /* Change color on hover */
+}
+
+#fire-button {
+  background-color: rgb(86, 13, 13);
+}
+
+#water-button {
+  background-color: rgb(14, 14, 90);
+}
+
+#wind-button {
+  background-color: rgb(158, 158, 27);
+}
+
+#earth-button {
+  background-color: rgb(19, 81, 19);
+}
+
+
+
+
+
 /*Footer*/
 .footer {
   text-align: center;

@@ -39,6 +39,14 @@
         </div>
     </div>
 
+    <div id="scores-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
+        </div>
+    </div>
+    
+    
+
     <div class="elements">
         <div class="element" id="fire">
             <img src="./Images/fire.jpg" alt="Fire">
@@ -97,6 +105,22 @@
             </div>
         </div>
     </div>
+
+    <div id="custom-prompt" class="custom-prompt" style="display:none;">
+        <div class="prompt-content">
+            <p>Choose what power element to use:</p>
+            <div class="element-buttons">
+                <button class="element-button" id="fire-button">Fire</button>
+                <button class="element-button" id="water-button">Water</button>
+                <button class="element-button" id="wind-button">Wind</button>
+                <button class="element-button" id="earth-button">Earth</button>
+            </div>
+            <button id="confirm-element">Confirm</button>
+        </div>
+    </div>
+    
+    
+    
 
     <footer class="footer">
         <p>the odin project</p>
