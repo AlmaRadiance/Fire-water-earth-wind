@@ -12,6 +12,58 @@
 
 
 <body>
+
+
+<!--Header with Dropdown Menu-->
+<header class="header">
+    <h1> Welcome to the Elemental Adventure Game: <br> 
+        <span class="fire">Fire</span> -
+        <span class="water">Water</span> -
+        <span class="earth">Earth</span> -
+        <span class="wind">Wind</span> 
+</h1>
+
+    <div class="dropdown">
+        <button class="dropbtn">
+            <i class="fa-solid fa-bars"></i>              
+            Menu
+        </button>
+
+        <div class="dropdown-content">
+          <a id="rules-link" href="#">Rules</a>
+          <a id="scores-link" href="#">Scores</a>
+          <a id="rounds-link" href="#">Rounds</a>
+        </div>
+      </div>
+</header>
+
+
+<!--Start Button-->
+<div class="start-button">  
+    <button class="main-button" id="start-button">
+        <i class="material-icons-outlined">sports_esports</i>
+        PLAY
+    </button>
+</div>
+<!--Game Container
+<div class="game-container">
+    <h2 class="game-title">Player vs. Computer</h2>
+    <div class="icons">
+        <div class="player">
+            <i class="fa-solid fa-person fa-bounce"></i>
+        </div>
+        <div class="computer">
+            <i class="fa-solid fa-computer fa-bounce"></i>
+        </div>
+    </div>
+</div>-->
+
+
+
+
+
+
+<!--Popup Container-->
     <div id="popup-container" class="popup">
         <div class="popup-content">
             <span class="close-popup" onclick="closePopup()">&times;</span>
@@ -47,68 +99,18 @@
     
     
 
-    <div class="elements">
-        <div class="element" id="fire">
-            <img src="./Images/fire.jpg" alt="Fire">
-        </div>
-        <div class="element" id="water">
-            <img src="./Images/water.jpg" alt="Water">
-        </div>
-        <div class="element" id="wind">
-            <img src="./Images/wind.jpg" alt="Fire">
-        </div>
-        <div class="element" id="earth">
-            <img src="./Images/earth.jpg" alt="Fire">
-        </div>
-    </div>
-    
-    <header>
-        <h1> Welcome to the Elemental Adventure Game: <br> 
-            <span class="fire">Fire</span> -
-            <span class="water">Water</span> -
-            <span class="earth">Earth</span> -
-            <span class="wind">Wind</span> 
-    </h1>
 
-        <div class="dropdown">
-            <button class="dropbtn">
-                <i class="fa-solid fa-bars"></i>              
-                Menu
-            </button>
 
-            <div class="dropdown-content">
-              <a id="rules-link" href="#">Rules</a>
-              <a id="scores-link" href="#">Scores</a>
-              <a id="rounds-link" href="#">Rounds</a>
-            </div>
-          </div>
-          
 
-    </header>
-    
-    <div class="start-button">  
-        <button class="main-button" id="start-button">
-            <i class="material-icons-outlined">restart_alt</i>
-            PLAY
-        </button>
-    </div>
-    
-
-    <div class="game-container">
-        <h2 class="game-title">Player vs. Computer</h2>
-        <div class="icons">
-            <div class="player">
-                <i class="fa-solid fa-person fa-bounce"></i>
-            </div>
-            <div class="computer">
-                <i class="fa-solid fa-computer fa-bounce"></i>
-            </div>
-        </div>
-    </div>
-
+<!--Custom Prompt Popup Window-->
     <div id="custom-prompt" class="custom-prompt" style="display:none;">
         <div class="prompt-content">
             <p>Choose what power element to use:</p>
+            <div class="element-images">
+                <img src="./Images/fire.jpg" alt="Fire" class="element-image" id="fire-image">
+                <img src="./Images/water.jpg" alt="Water" class="element-image" id="fire-image">
+                <img src="./Images/wind.jpg" alt="Wind" class="element-image" id="fire-image">
+                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="fire-image">
             <div class="element-buttons">
                 <button class="element-button" id="fire-button">Fire</button>
                 <button class="element-button" id="water-button">Water</button>
@@ -118,14 +120,31 @@
             <button id="confirm-element">Confirm</button>
         </div>
     </div>
+    </div>
     
-    
-    
+ 
 
-    <footer class="footer">
-        <p>the odin project</p>
-    </footer>
 
-    <script src="./index.js"></script>     
+
+    
+<!--Footer-->
+    <div>
+        <footer class="footer">
+            <p>The odin project | By: Alma P.</p>
+        </footer>
+    </div>
+
+        <script src="./index.js"></script>     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+

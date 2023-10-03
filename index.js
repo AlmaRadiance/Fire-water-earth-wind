@@ -44,12 +44,20 @@ const playRound = (playerSelection, computerSelection) => {
 
 // Function to play the game using custom prompt
 const gameWithCustomPrompt = async () => {
+    let gameResults = [];
     for (let i = 0; i < 5; i++) {
         const playerSelection = await getCustomInput();
         const computerSelection = computerPlay();
-        console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+        const roundResult = playRound(playerSelection.toLowerCase(), computerSelection);
+        gameResults.push({ player: playerSelection, computer: computerSelection, result: roundResult });
     }
+
+    displayScores(gameResults); // Added this line to display scores after the game ends
+
+    return gameResults;
 }
+
+      
 
 // Function to get custom input
 const getCustomInput = () => {
@@ -97,10 +105,10 @@ document.getElementById('rounds-link').addEventListener('click', () => {
 });
 
 // Display scores in a table
-function displayScores() {
+function displayScores(gameResults) {
     let tableHTML = "<h2>Scores</h2><table>";
     tableHTML += "<tr><th>Round</th><th>Your Choice</th><th>Computer's Choice</th><th>Result</th></tr>";
-    scores.forEach((score, index) => {
+    gameResults.forEach((score, index) => {
         tableHTML += `<tr><td>${index + 1}</td><td>${score.player}</td><td>${score.computer}</td><td>${score.result}</td></tr>`;
     });
     tableHTML += "</table>";
@@ -108,12 +116,16 @@ function displayScores() {
     document.querySelector('#scores-popup .popup-content').innerHTML = tableHTML;
 }
 
-displayScores();
+
 
 // Call the gameWithCustomPrompt function when the button is clicked
 document.getElementById('start-button').addEventListener('click', async () => {
-    await gameWithCustomPrompt(); // Note the use of 'await' here
+    await gameWithCustomPrompt(); 
 });
+
+
+
+
 
 
 
