@@ -45,21 +45,6 @@
         PLAY
     </button>
 </div>
-<!--Game Container
-<div class="game-container">
-    <h2 class="game-title">Player vs. Computer</h2>
-    <div class="icons">
-        <div class="player">
-            <i class="fa-solid fa-person fa-bounce"></i>
-        </div>
-        <div class="computer">
-            <i class="fa-solid fa-computer fa-bounce"></i>
-        </div>
-    </div>
-</div>-->
-
-
-
 
 
 
@@ -94,6 +79,7 @@
     <div id="scores-popup" class="popup">
         <div class="popup-content">
             <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
+            <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
         </div>
     </div>
     
@@ -105,12 +91,20 @@
 <!--Custom Prompt Popup Window-->
     <div id="custom-prompt" class="custom-prompt" style="display:none;">
         <div class="prompt-content">
+            <button class="close-prompt-button right" onclick="closeCustomPrompt()">Close</button>
+
+            <div class="scores">
+                <span id="player-score" style="margin-right: 100px; font-size: 20px; font-weight: bold;">Player: 0</span>
+                <span id="computer-score" style="margin-left: 100px; font-size: 20px; font-weight: bold;">Computer: 0</span>
+            </div>
+            
             <p>Choose what power element to use:</p>
             <div class="element-images">
                 <img src="./Images/fire.jpg" alt="Fire" class="element-image" id="fire-image">
-                <img src="./Images/water.jpg" alt="Water" class="element-image" id="fire-image">
-                <img src="./Images/wind.jpg" alt="Wind" class="element-image" id="fire-image">
-                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="fire-image">
+                <img src="./Images/water.jpg" alt="Water" class="element-image" id="water-image">
+                <img src="./Images/wind.jpg" alt="Wind" class="element-image" id="wind-image">
+                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="earth-image">
+               
             <div class="element-buttons">
                 <button class="element-button" id="fire-button">Fire</button>
                 <button class="element-button" id="water-button">Water</button>
@@ -118,6 +112,17 @@
                 <button class="element-button" id="earth-button">Earth</button>
             </div>
             <button id="confirm-element">Confirm</button>
+        </div>
+        <h2 class="game-title">Player vs. Computer</h2>
+        <!--<div class="game-container"> </div>-->
+            <!--<div class="icons">
+                <div class="player">
+                    <i class="fa-solid fa-person fa-bounce"></i>
+                </div>
+                <div class="computer">
+                    <i class="fa-solid fa-computer fa-bounce"></i>
+                </div>-->
+           
         </div>
     </div>
     </div>
