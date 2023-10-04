@@ -1,6 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
-let scores = Array.from({ length: 5 }, () => ({ player: 0, computer: 0, result: 'Not played' }));
+let scores = Array.from({ length: 5 }, () => ({ player: 'Not played', computer: 'Not played', result: 'Not played' }));
 
 const updateScores = () => {
     document.getElementById('player-score').textContent = `Player: ${playerScore}`;
@@ -47,7 +47,7 @@ const playRound = (playerSelection, computerSelection, round) => {
         computerScore++;
     }
 
-    scores.push({ player: playerSelection, computer: computerSelection, result });
+    scores[round - 1] = { player: playerSelection, computer: computerSelection, result };
     updateScores();
 
     // Hide messages from previous rounds
@@ -104,8 +104,6 @@ const gameWithCustomPrompt = async () => {
     return gameResults;
 }
 
-// Rest of the code remains the same...
-
 // Add an event listener to the "Rules", "scores", "round" link
 document.getElementById('rules-link').addEventListener('click', () => {
     openPopup(); // Call the openPopup() function when the link is clicked
@@ -135,7 +133,6 @@ function displayScores(gameResults) {
 document.getElementById('start-button').addEventListener('click', async () => {
     await gameWithCustomPrompt(); 
 });
-
 
 
 
