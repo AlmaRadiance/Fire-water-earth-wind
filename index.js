@@ -50,6 +50,32 @@ const playRound = (playerSelection, computerSelection, round) => {
     scores[round - 1] = { player: playerSelection, computer: computerSelection, result };
     updateScores();
 
+
+
+
+
+
+      // Display player and computer element images only when selections are made
+      if (playerSelection && computerSelection) {
+        const playerElementImage = document.getElementById('player-element-image');
+        const computerElementImage = document.getElementById('computer-element-image');
+        playerElementImage.src = `./Images/${playerSelection}.jpg`;
+        computerElementImage.src = `./Images/${computerSelection}.jpg`;
+
+        // Add bouncing animation
+        playerElementImage.style.animation = 'bounce 1s';
+        computerElementImage.style.animation = 'bounce 1s';
+
+        setTimeout(() => {
+            playerElementImage.style.animation = '';
+            computerElementImage.style.animation = '';
+        }, 1000);
+    }
+
+
+
+    
+
     // Hide messages from previous rounds
     document.querySelectorAll('.round-message').forEach(message => {
         message.style.display = 'none';
@@ -60,6 +86,14 @@ const playRound = (playerSelection, computerSelection, round) => {
     roundResultMessage.textContent = `You ${result.toLowerCase()} round ${round}!`;
 
     document.querySelector('.prompt-content').appendChild(roundResultMessage);
+
+
+
+ // Display the game container
+ document.querySelector('.game-container').style.display = 'block';
+
+
+
 
     return result;
 }

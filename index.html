@@ -1,109 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
-    <title>Fire-Water-Earth-Wind</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
+        <title>Fire-Water-Earth-Wind</title>
+    </head>
  
 
 
-<body>
+    <body>
 
 
-<!--Header with Dropdown Menu-->
-<header class="header">
-    <h1> Welcome to the Elemental Adventure Game: <br> 
-        <span class="fire">Fire</span> -
-        <span class="water">Water</span> -
-        <span class="earth">Earth</span> -
-        <span class="wind">Wind</span> 
-</h1>
+        <!--Header with Dropdown Menu-->
+        <header class="header">
+            <h1> Welcome to the Elemental Adventure Game: <br> 
+                <span class="fire">Fire</span> -
+                <span class="water">Water</span> -
+                <span class="earth">Earth</span> -
+                <span class="wind">Wind</span> 
+            </h1>
 
-    <div class="dropdown">
-        <button class="dropbtn">
-            <i class="fa-solid fa-bars"></i>              
-            Menu
-        </button>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa-solid fa-bars"></i> Menu
+                </button>
 
-        <div class="dropdown-content">
-          <a id="rules-link" href="#">Rules</a>
-          <a id="scores-link" href="#">Scores</a>
-          <a id="rounds-link" href="#">Rounds</a>
+                <div class="dropdown-content">
+                <a id="rules-link" href="#">Rules</a>
+                <a id="scores-link" href="#">Scores</a>
+                <a id="rounds-link" href="#">Rounds</a>
+                </div>
+            </div>
+        </header>
+
+
+        <!--Start Button-->
+        <div class="start-button">  
+            <button class="main-button" id="start-button">
+                <i class="material-icons-outlined">sports_esports</i>
+                PLAY
+            </button>
         </div>
-      </div>
-</header>
-
-
-<!--Start Button-->
-<div class="start-button">  
-    <button class="main-button" id="start-button">
-        <i class="material-icons-outlined">sports_esports</i>
-        PLAY
-    </button>
-</div>
 
 
 
-<!--Popup Container-->
-    <div id="popup-container" class="popup">
-        <div class="popup-content">
-            <span class="close-popup" onclick="closePopup()">&times;</span>
-            <h2>Game Rules</h2>
-            <p>Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
-            <h3>Rules</h3>
-            <p>
-                In this mystical world, you possess the power of Fire, Water, Wind, and Earth. 
-                Brace yourself for epic battles against the computer!
-            </p>            
-            <ul>
-                <li>Each player selects an element.</li>
-                <li>The computer will also randomly choose an element.</li>
-                <li>The winner is determined based on the elemental strengths and weaknesses.</li>
-                <li>Prepare for an epic contest spanning five rounds. Every selection, every move, will determine the course of the battle.</li>
-                <li>With every round, the stage is set for the ultimate victor. Choose your element wisely, for in this elemental saga, only the mightiest will triumph!</li>
-            </ul>
-            <h3>The Elements</h3>
-            <ul>
-                <li>Fire: Fierce and unyielding, Fire burns Wind but is extinguished by Water.</li>
-                <li>Water: Fluid and adaptable, Water douses Fire but is swept away by Wind.</li>
-                <li>Wind: Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</li>
-                <li>Earth: Steadfast and unyielding, Earth resists Wind but is eroded by Water.</li>
-            </ul>
+        <!--Popup Container-->
+        <div id="popup-container" class="popup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closePopup()">&times;</span>
+                <h2>Game Rules</h2>
+                <p>Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
+                <h3>Rules</h3>
+                <p>
+                    In this mystical world, you possess the power of Fire, Water, Wind, and Earth. 
+                    Brace yourself for epic battles against the computer!
+                </p>            
+                <ul>
+                    <li>Each player selects an element.</li>
+                    <li>The computer will also randomly choose an element.</li>
+                    <li>The winner is determined based on the elemental strengths and weaknesses.</li>
+                    <li>Prepare for an epic contest spanning five rounds. Every selection, every move, will determine the course of the battle.</li>
+                    <li>With every round, the stage is set for the ultimate victor. Choose your element wisely, for in this elemental saga, only the mightiest will triumph!</li>
+                </ul>
+                <h3>The Elements</h3>
+                <ul>
+                    <li>Fire: Fierce and unyielding, Fire burns Wind but is extinguished by Water.</li>
+                    <li>Water: Fluid and adaptable, Water douses Fire but is swept away by Wind.</li>
+                    <li>Wind: Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</li>
+                    <li>Earth: Steadfast and unyielding, Earth resists Wind but is eroded by Water.</li>
+                </ul>
+            </div>
         </div>
-    </div>
 
-    <div id="scores-popup" class="popup">
-        <div class="popup-content">
-            <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
-            <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
+        <div id="scores-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
+                <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
+            </div>
         </div>
-    </div>
     
     
 
 
 
 
-<!--Custom Prompt Popup Window-->
+    <!--Custom Prompt Popup Window-->
     <div id="custom-prompt" class="custom-prompt" style="display:none;">
+        
         <div class="prompt-content">
             <button class="close-prompt-button right" onclick="closeCustomPrompt()">Close</button>
-
+            
             <div class="scores">
                 <span id="player-score" style="margin-right: 100px; font-size: 20px; font-weight: bold;">Player: 0</span>
                 <span id="computer-score" style="margin-left: 100px; font-size: 20px; font-weight: bold;">Computer: 0</span>
             </div>
             
             <p>Choose what power element to use:</p>
-            <div class="element-images">
+            <!--<div class="element-images">
                 <img src="./Images/fire.jpg" alt="Fire" class="element-image" id="fire-image">
                 <img src="./Images/water.jpg" alt="Water" class="element-image" id="water-image">
                 <img src="./Images/wind.jpg" alt="Wind" class="element-image" id="wind-image">
-                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="earth-image">
+                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="earth-image">-->
                
             <div class="element-buttons">
                 <button class="element-button" id="fire-button">Fire</button>
@@ -111,36 +111,43 @@
                 <button class="element-button" id="wind-button">Wind</button>
                 <button class="element-button" id="earth-button">Earth</button>
             </div>
-            <button id="confirm-element">Confirm</button>
+
+             <!--<button id="confirm-element">Confirm</button>-->
         </div>
+
         <h2 class="game-title">Player vs. Computer</h2>
-        <!--<div class="game-container"> </div>-->
-            <!--<div class="icons">
-                <div class="player">
-                    <i class="fa-solid fa-person fa-bounce"></i>
-                </div>
-                <div class="computer">
-                    <i class="fa-solid fa-computer fa-bounce"></i>
-                </div>-->
+        
+        <div class="game-container" style="display: none;">
+            
+            <div class="player">
+                <img id="player-element-image" class="element-image" src="" alt="">
+            </div>
+            
+            <div class="computer">
+                <img id="computer-element-image" class="element-image" src="" alt="">
+            </div>
+
            
+
         </div>
+    
     </div>
-    </div>
+   
     
  
 
 
 
     
-<!--Footer-->
-    <div>
-        <footer class="footer">
-            <p>The odin project | By: Alma P.</p>
-        </footer>
-    </div>
+        <!--Footer-->
+            <div>
+                <footer class="footer">
+                    <p>The odin project | By: Alma P.</p>
+                </footer>
+            </div>
 
-        <script src="./index.js"></script>     
-</body>
+            <script src="./index.js"></script>     
+    </body>
 </html>
 
 
