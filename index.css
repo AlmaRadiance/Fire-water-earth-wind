@@ -45,6 +45,29 @@
     .earth { color: #0F0; }
     .wind { color: #FF0; }
 
+
+    .typewriter  {
+      overflow: hidden;
+      border-right: .15em solid transparent;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: transparent; }
+    }
+    
+
 /*Start Button*/
     .start-button {
       text-align: center;
@@ -111,10 +134,19 @@
       text-align: center; 
     }
 
+      .game-container .player,
+      .game-container .computer {
+      display: inline-block; 
+      margin: 0 10px;
+      margin-top: 40px;
+    }
+
+
     .game-title {
-      font-size: 18px; 
+      font-size: 23px; 
       margin-bottom: 0px; 
       font-family: Copperplate, sans-serif;
+      text-align: center;
     }
 
     .icons {
@@ -430,8 +462,8 @@
   }
 
   .element-image {
-    width: 50px;
-    height: 50px;
+    width: 120px;
+    height: 60px;
     margin-bottom: 10px;
     animation: bounce 1s infinite;
 }

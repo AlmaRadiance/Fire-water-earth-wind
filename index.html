@@ -17,10 +17,12 @@
         <!--Header with Dropdown Menu-->
         <header class="header">
             <h1> Welcome to the Elemental Adventure Game: <br> 
+            <div class="typewriter">
                 <span class="fire">Fire</span> -
                 <span class="water">Water</span> -
                 <span class="earth">Earth</span> -
                 <span class="wind">Wind</span> 
+            </div>
             </h1>
 
             <div class="dropdown">
@@ -52,9 +54,9 @@
             <div class="popup-content">
                 <span class="close-popup" onclick="closePopup()">&times;</span>
                 <h2>Game Rules</h2>
-                <p>Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
+                <p style="font-weight: normal;">Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
                 <h3>Rules</h3>
-                <p>
+                <p style="font-weight: normal;">
                     In this mystical world, you possess the power of Fire, Water, Wind, and Earth. 
                     Brace yourself for epic battles against the computer!
                 </p>            
@@ -78,7 +80,7 @@
         <div id="scores-popup" class="popup">
             <div class="popup-content">
                 <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
-                <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
+               <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
             </div>
         </div>
     
@@ -91,7 +93,7 @@
     <div id="custom-prompt" class="custom-prompt" style="display:none;">
         
         <div class="prompt-content">
-            <button class="close-prompt-button right" onclick="closeCustomPrompt()">Close</button>
+             <button class="close-prompt-button right" onclick="closeCustomPrompt()">Close</button>
             
             <div class="scores">
                 <span id="player-score" style="margin-right: 100px; font-size: 20px; font-weight: bold;">Player: 0</span>

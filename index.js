@@ -138,6 +138,31 @@ const gameWithCustomPrompt = async () => {
     return gameResults;
 }
 
+
+
+
+// Opening and closing popup windows
+function openPopup() {
+    document.getElementById('popup-container').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+function openScoresPopup() {
+    document.getElementById('scores-popup').style.display = 'block';
+}
+
+function closeScoresPopup() {
+    document.getElementById('scores-popup').style.display = 'none';
+}
+
+
+
+
+
+
 // Add an event listener to the "Rules", "scores", "round" link
 document.getElementById('rules-link').addEventListener('click', () => {
     openPopup(); // Call the openPopup() function when the link is clicked
@@ -150,6 +175,11 @@ document.getElementById('scores-link').addEventListener('click', () => {
 document.getElementById('rounds-link').addEventListener('click', () => {
     openPopup(); 
 });
+
+
+
+
+
 
 // Display scores in a table
 function displayScores(gameResults) {
