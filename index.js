@@ -127,10 +127,14 @@ const gameWithCustomPrompt = async () => {
 
     if (playerScore > computerScore) {
         gameResultMessage.textContent = `You win the game!`;
+        document.getElementById('win-sound').play(); // Play win sound
     } else if (playerScore < computerScore) {
         gameResultMessage.textContent = `You lose the game!`;
+        document.getElementById('lose-sound').play(); // Play fail sound
     } else {
         gameResultMessage.textContent = `It's a tie!`;
+        document.getElementById('tie-sound').play(); // Play tie sound
+
     }
 
     document.querySelector('.prompt-content').appendChild(gameResultMessage);
@@ -197,6 +201,23 @@ function displayScores(gameResults) {
 document.getElementById('start-button').addEventListener('click', async () => {
     await gameWithCustomPrompt(); 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
