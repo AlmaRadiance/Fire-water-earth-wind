@@ -33,7 +33,6 @@
                 <div class="dropdown-content">
                 <a id="rules-link" href="#">Rules</a>
                 <a id="scores-link" href="#">Scores</a>
-                <a id="rounds-link" href="#">Rounds</a>
                 </div>
             </div>
         </header>
@@ -68,12 +67,45 @@
                     <li>With every round, the stage is set for the ultimate victor. Choose your element wisely, for in this elemental saga, only the mightiest will triumph!</li>
                 </ul>
                 <h3>The Elements</h3>
-                <ul>
-                    <li>Fire: Fierce and unyielding, Fire burns Wind but is extinguished by Water.</li>
-                    <li>Water: Fluid and adaptable, Water douses Fire but is swept away by Wind.</li>
-                    <li>Wind: Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</li>
-                    <li>Earth: Steadfast and unyielding, Earth resists Wind but is eroded by Water.</li>
-                </ul>
+                <div class="elements">
+                    <ul>
+                        <li>
+                            <video autoplay muted loop width="100" height="100">
+                                <source src="./Images/Fire.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Fire</p>
+                            <p style="font-weight: normal;">Fierce and unyielding, Fire burns Wind but is extinguished by Water.</p>
+                        </li>
+                        <li>
+                            <video autoplay muted loop width="100" height="100">
+                                <source src="./Images/water.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Water</p>
+                            <p style="font-weight: normal;">Fluid and adaptable, Water douses Fire but is swept away by Wind.</p>
+                        </li>
+                        <li>
+                            <video autoplay muted loop width="70" height="200">
+                                <source src="./Images/wind.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Wind</p>
+                            <p style="font-weight: normal;">Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</p>
+                        </li>
+                        <li>
+                            <video autoplay muted loop width="70" height="200">
+                                <source src="./Images/earth.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <p>Earth</p>
+                            <p style="font-weight: normal;">Steadfast and unyielding, Earth resists Wind but is eroded by Water.</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+
             </div>
         </div>
 
@@ -108,6 +140,7 @@
                 <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="earth-image">-->
                
             <div class="element-buttons">
+             
                 <button class="element-button" id="fire-button">Fire</button>
                 <button class="element-button" id="water-button">Water</button>
                 <button class="element-button" id="wind-button">Wind</button>
@@ -129,9 +162,9 @@
                 <img id="computer-element-image" class="element-image" src="" alt="">
             </div>
 
-          
+            
+
         </div>
-    
     </div>
    
     

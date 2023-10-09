@@ -181,7 +181,9 @@
 
 
 /*Popup Windows in Menu button for Rules, Scores, Rounds*/
-    .popup {
+
+
+  .popup {
       display: none;
       position: fixed;
       z-index: 1;
@@ -198,11 +200,12 @@
       margin: 10% auto;
       padding: 20px;
       border: 1px solid #ffffff;
-      height: 90%; 
-      max-height: 600px; 
+      height: 120%; 
+      max-height: 900px; 
       width: 90%;
       max-width: 800px;
       position: relative;
+      overflow-y: auto; 
     }
 
 
@@ -211,6 +214,7 @@
       float: right;
       font-size: 28px;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .elements .element img {
@@ -224,6 +228,44 @@
         transform: scale(1.1);
     }
 
+    
+/* Add this CSS to style the elements with videos */
+.elements ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elements ul li {
+  flex: 0 0 calc(25% - 20px);
+  margin: 0;
+  text-align: center;
+}
+
+.elements ul li video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.elements ul li p {
+  margin: 0;
+}
+
+.elements ul li:nth-child(3) {
+  margin-top: 29px; /* Adjust this value to lower the Wind video and text */
+}
+
+.elements ul li:nth-child(4) {
+  margin-top: 29px; /* Adjust this value to lower the Wind video and text */
+}
+
+
+
+
+  
 
 
 
@@ -331,7 +373,7 @@
     }
   
 
-    p{
+    p {
       font-size: 17px;
       font-weight: bold;
       font-family: Copperplate, sans-serif;
@@ -404,7 +446,7 @@
     #earth-button:hover {
       background-color: rgb(19, 81, 19);      
       color:white;
-      border:none;
+      border: none;
     }
 
     .element-images {
@@ -475,10 +517,75 @@
     50% {
         transform: translateY(-10px);
     }
+  }
+
+
+.element-label {
+  font-size: 20px;
+  display: block;
+  margin-top: 10px;
+}
+
+.element.selected {
+  border: 2px solid #ffc107;
+}
+
+.element:hover {
+  transform: scale(1.05);
+}
+
+.element {
+  cursor: pointer;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 10px;
+  transition: transform 0.3s;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.element img {
+  max-width: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+  
+.element video {
+  width: 20%; 
+  height: 20%; 
 }
 
 
-    
+
+
+
+
+#h-gif {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+}
+#h-gif {
+  position: fixed;
+  bottom:20px;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -517,6 +624,8 @@
     }
 
 
+
+    
 
 
 

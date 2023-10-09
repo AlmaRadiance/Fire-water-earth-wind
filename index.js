@@ -176,9 +176,7 @@ document.getElementById('scores-link').addEventListener('click', () => {
     openScoresPopup(); 
 });
 
-document.getElementById('rounds-link').addEventListener('click', () => {
-    openPopup(); 
-});
+
 
 
 
@@ -201,6 +199,9 @@ function displayScores(gameResults) {
 document.getElementById('start-button').addEventListener('click', async () => {
     await gameWithCustomPrompt(); 
 });
+
+
+
 
 
 
