@@ -1,1 +1,1 @@
-# Fire-water-earth-wind
+# Rock-Paper-Scissors
