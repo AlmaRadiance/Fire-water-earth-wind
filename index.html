@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
-        <title>Fire-Water-Earth-Wind</title>
+        <title>Rock-Paper-Scissors</title>
     </head>
  
 
@@ -18,10 +18,9 @@
         <header class="header">
             <h1> Welcome to the Elemental Adventure Game: <br> 
             <div class="typewriter">
-                <span class="fire">Fire</span> -
-                <span class="water">Water</span> -
-                <span class="earth">Earth</span> -
-                <span class="wind">Wind</span> 
+                <span class="Rock">Rock</span> -
+                <span class="Paper">Paper</span> -
+                <span class="Scissors">Scissors</span> 
             </div>
             </h1>
 
@@ -53,56 +52,45 @@
             <div class="popup-content">
                 <span class="close-popup" onclick="closePopup()">&times;</span>
                 <h2>Game Rules</h2>
-                <p style="font-weight: normal;">Welcome to the Elemental Adventure Game, where ancient powers clash!</p>
+                <p style="font-weight: normal;">Welcome to the Rock-Paper-Scissors Game!</p>
                 <h3>Rules</h3>
                 <p style="font-weight: normal;">
-                    In this mystical world, you possess the power of Fire, Water, Wind, and Earth. 
-                    Brace yourself for epic battles against the computer!
+                    Get ready for a classic game of Rock-Paper-Scissors against the computer!
                 </p>            
                 <ul>
-                    <li>Each player selects an element.</li>
-                    <li>The computer will also randomly choose an element.</li>
-                    <li>The winner is determined based on the elemental strengths and weaknesses.</li>
+                    <li>Each player selects either Rock, Paper, or Scissors.</li>
+                    <li>The computer will also randomly choose one of the options.</li>
+                    <li>The winner is determined based on the following rules:
+                        <ul>
+                            <li>Rock beats Scissors</li>
+                            <li>Scissors beats Paper</li>
+                            <li>Paper beats Rock</li>
+                        </ul>
+                    </li>
                     <li>Prepare for an epic contest spanning five rounds. Every selection, every move, will determine the course of the battle.</li>
-                    <li>With every round, the stage is set for the ultimate victor. Choose your element wisely, for in this elemental saga, only the mightiest will triumph!</li>
+                    <li>With every round, the stage is set for the ultimate victor. Choose your move wisely, for in this game, only the sharpest will triumph!</li>
                 </ul>
-                <h3>The Elements</h3>
+                <h3>Choose Your Move</h3>
                 <div class="elements">
                     <ul>
                         <li>
-                            <video autoplay muted loop width="100" height="100">
-                                <source src="./Images/Fire.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p>Fire</p>
-                            <p style="font-weight: normal;">Fierce and unyielding, Fire burns Wind but is extinguished by Water.</p>
+                            <img class="img-bounce" src="./Images/r.jpg" alt="Rock" width="140" height="80">
+                            <p>Rock</p>
+                            <p style="font-weight: normal;">Solid and unyielding, Rock crushes Scissors but is covered by Paper.</p>
                         </li>
                         <li>
-                            <video autoplay muted loop width="100" height="100">
-                                <source src="./Images/water.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p>Water</p>
-                            <p style="font-weight: normal;">Fluid and adaptable, Water douses Fire but is swept away by Wind.</p>
+                            <img class="img-bounce" src="./Images/p.jpg" alt="Paper" width="140" height="80">
+                            <p>Paper</p>
+                            <p style="font-weight: normal;">Thin and protective, Paper covers Rock but is cut by Scissors.</p>
                         </li>
                         <li>
-                            <video autoplay muted loop width="70" height="200">
-                                <source src="./Images/wind.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p>Wind</p>
-                            <p style="font-weight: normal;">Swift and powerful, Wind extinguishes Fire but is resisted by Earth.</p>
-                        </li>
-                        <li>
-                            <video autoplay muted loop width="70" height="200">
-                                <source src="./Images/earth.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                            <p>Earth</p>
-                            <p style="font-weight: normal;">Steadfast and unyielding, Earth resists Wind but is eroded by Water.</p>
+                            <img class="img-bounce" src="./Images/s.jpg" alt="Scissors" width="140" height="80">
+                            <p>Scissors</p>
+                            <p style="font-weight: normal;">Sharp and precise, Scissors cut Paper but are crushed by Rock.</p>
                         </li>
                     </ul>
                 </div>
+                
 
 
 
@@ -134,17 +122,15 @@
             
             <p>Choose what power element to use:</p>
             <!--<div class="element-images">
-                <img src="./Images/fire.jpg" alt="Fire" class="element-image" id="fire-image">
-                <img src="./Images/water.jpg" alt="Water" class="element-image" id="water-image">
-                <img src="./Images/wind.jpg" alt="Wind" class="element-image" id="wind-image">
-                <img src="./Images/earth.jpg" alt="Earth" class="element-image" id="earth-image">-->
+                <img src="./Images/rock.png" alt="Rock" class="element-image" id="rock-image">
+                <img src="./Images/paper.png" alt="Paper" class="element-image" id="paper-image">
+                <img src="./Images/scissors.png" alt="Scissors" class="element-image" id="scissors-image">-->
                
             <div class="element-buttons">
              
-                <button class="element-button" id="fire-button">Fire</button>
-                <button class="element-button" id="water-button">Water</button>
-                <button class="element-button" id="wind-button">Wind</button>
-                <button class="element-button" id="earth-button">Earth</button>
+                <button class="element-button" id="rock-button">Rock</button>
+                <button class="element-button" id="paper-button">Paper</button>
+                <button class="element-button" id="scissors-button">Scissors</button>
             </div>
 
              <!--<button id="confirm-element">Confirm</button>-->
@@ -178,15 +164,13 @@
         <!--Footer-->
             <div>
                 <footer class="footer">
-                    <p>The odin project | By: Alma P.</p>
+                    <p>&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALMA P.</p>
                 </footer>
             </div>
 
             <audio id="win-sound" src="./Images/win.mp3"></audio>
             <audio id="lose-sound" src="./Images/fail.mp3"></audio>
             <audio id="tie-sound" src="./Images/Tie.mp3"></audio>
-            <audio id="tie-sound" src="./Images/clickbutton.mp3"></audio>
-
             <script src="./index.js"></script>     
     </body>
 </html>

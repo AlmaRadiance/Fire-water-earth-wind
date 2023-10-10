@@ -8,8 +8,8 @@ const updateScores = () => {
 }
 
 const computerPlay = () => {
-    const arrOfChoices = ['fire', 'water', 'wind', 'earth']
-    const randomNum = Math.floor(Math.random() * 4)
+    const arrOfChoices = ['rock', 'paper', 'scissors']
+    const randomNum = Math.floor(Math.random() * 3)
     const compChoice = arrOfChoices[randomNum]
     return compChoice;
 }
@@ -35,10 +35,9 @@ const playRound = (playerSelection, computerSelection, round) => {
     if (playerSelection === computerSelection) {
         result = 'Tie';
     } else if (
-        (playerSelection === 'fire' && computerSelection === 'wind') ||
-        (playerSelection === 'water' && computerSelection === 'fire') ||
-        (playerSelection === 'wind' && computerSelection === 'water') ||
-        (playerSelection === 'earth' && computerSelection === 'wind')
+        (playerSelection === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
         result = 'Win';
         playerScore++;
@@ -59,8 +58,8 @@ const playRound = (playerSelection, computerSelection, round) => {
       if (playerSelection && computerSelection) {
         const playerElementImage = document.getElementById('player-element-image');
         const computerElementImage = document.getElementById('computer-element-image');
-        playerElementImage.src = `./Images/${playerSelection}.jpg`;
-        computerElementImage.src = `./Images/${computerSelection}.jpg`;
+        playerElementImage.src = `./Images/${playerSelection}.png`;
+        computerElementImage.src = `./Images/${computerSelection}.png`;
 
         // Add bouncing animation
         playerElementImage.style.animation = 'bounce 1s';
@@ -199,6 +198,10 @@ function displayScores(gameResults) {
 document.getElementById('start-button').addEventListener('click', async () => {
     await gameWithCustomPrompt(); 
 });
+
+
+
+
 
 
 
