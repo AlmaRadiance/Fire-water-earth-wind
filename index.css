@@ -381,6 +381,7 @@ padding: 20px;
 border: 1px solid #ccc;
 border-radius: 8px;
 box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+z-index: 999; 
 }
 
 .prompt-content {
@@ -554,9 +555,15 @@ width: 20%;
 height: 20%; 
 }
 
-
-
-
+.start-button {
+  z-index: 2;
+}
+.dropdown {
+  z-index:3;
+}
+.footer {
+  z-index:1;
+}
 
 
 
