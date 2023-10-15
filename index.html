@@ -11,11 +11,11 @@
  
 
 
-    <body>
+    <body> 
 
 
         <!--Header with Dropdown Menu-->
-        <header class="header">
+        <!--<header class="header">
             <h1> Welcome to the Elemental Adventure Game: <br> 
             <div class="typewriter">
                 <span class="Rock">Rock</span> -
@@ -34,21 +34,25 @@
                 <a id="scores-link" href="#">Scores</a>
                 </div>
             </div>
-        </header>
+        </header>-->
 
 
         <!--Start Button-->
-        <div class="start-button">  
+       <!-- <div class="start-button">  
             <button class="main-button" id="start-button">
                 <i class="material-icons-outlined">sports_esports</i>
                 PLAY
             </button>
-        </div>
+        </div>-->
 
-
+        <button id="start-button" class="main-button">
+            <i class="material-icons-outlined">sports_esports</i> PLAY
+        </button>
+        
+        
 
         <!--Popup Container-->
-        <div id="popup-container" class="popup">
+         <!--<div id="popup-container" class="popup">
             <div class="popup-content">
                 <span class="close-popup" onclick="closePopup()">&times;</span>
                 <h2>Game Rules</h2>
@@ -95,14 +99,14 @@
 
 
             </div>
-        </div>
+        </div>-->
 
-        <div id="scores-popup" class="popup">
+        <!--<div id="scores-popup" class="popup">
             <div class="popup-content">
                 <span class="close-popup" onclick="closeScoresPopup()">&times;</span>
                <button class="close-popup-button" onclick="closeScoresPopup()">Close</button>
             </div>
-        </div>
+        </div>-->
     
     
 
@@ -136,6 +140,8 @@
              <!--<button id="confirm-element">Confirm</button>-->
         </div>
 
+        
+
         <h2 class="game-title">Player vs. Computer</h2>
         
         <div class="game-container" style="display: none;">
@@ -162,11 +168,11 @@
 
     
         <!--Footer-->
-            <div>
+              <!--<div>
                 <footer class="footer">
-                    <p>&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALMA P.</p>
+                    <p>copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALMA P.</p>
                 </footer>
-            </div>
+            </div>-->
 
             <audio id="win-sound" src="./Images/win.mp3"></audio>
             <audio id="lose-sound" src="./Images/fail.mp3"></audio>
@@ -174,6 +180,7 @@
             <script src="./index.js"></script>     
     </body>
 </html>
+
 
 
 
