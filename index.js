@@ -245,9 +245,13 @@ const playRound = (playerSelection, computerSelection, round) => {
 
 
 
- // Display the game container
- document.querySelector('.game-container').style.display = 'block';
+    // Display the game container
+    document.querySelector('.game-container').style.display = 'block';
 
+
+
+
+ 
 
 
 
@@ -257,7 +261,7 @@ const playRound = (playerSelection, computerSelection, round) => {
 const getCustomInput = () => {
     return new Promise(resolve => {
         openCustomPrompt();
-        addCloseButton();
+       // addCloseButton();
 
         document.querySelectorAll('.element-button').forEach(button => {
             button.addEventListener('click', () => {
@@ -293,8 +297,10 @@ const gameWithCustomPrompt = async () => {
 
     }
 
-    document.querySelector('.prompt-content').appendChild(gameResultMessage);
+    const promptContent = document.querySelector('.prompt-content');
+    promptContent.innerHTML = ''; 
 
+    promptContent.appendChild(gameResultMessage);
     return gameResults;
 }
 
@@ -355,6 +361,7 @@ function displayScores(gameResults) {
 document.getElementById('start-button').addEventListener('click', async () => {
     await gameWithCustomPrompt(); 
 });
+ 
 
 
 
@@ -362,8 +369,35 @@ document.getElementById('start-button').addEventListener('click', async () => {
 
 
 
+ // Hide player and computer images for final message
+ playerElementImage.style.display = 'none';
+ computerElementImage.style.display = 'none';
 
+// Add this after the gameResultMessage.textContent is set
+const videoContainer = document.createElement('div');
+videoContainer.classList.add('video-container');
+videoContainer.style.width = '50%'; 
+videoContainer.style.display = 'none';
 
+let videoSource;
+
+if (playerScore > computerScore) {
+    videoSource = './Images/win.mp4';
+} else if (playerScore < computerScore) {
+    videoSource = './Images/lose.mp4';
+} else {
+    videoSource = './Images/tie.mp4';
+}
+
+const videoElement = document.createElement('video');
+videoElement.src = videoSource;
+videoElement.autoplay = true;
+videoElement.loop = true;
+videoElement.muted = true;
+videoElement.style.width = '100%'; 
+
+videoContainer.appendChild(videoElement);
+document.querySelector('.prompt-content').appendChild(videoContainer);
 
 
 
