@@ -137,8 +137,10 @@ footer.innerHTML = '&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALM
  });
  
  document.getElementById('scores-link').addEventListener('click', () => {
-     openScoresPopup();
+    openScoresPopup();
  });
+
+
  
  document.getElementById('start-button').addEventListener('click', async () => {
      await gameWithCustomPrompt();
@@ -173,10 +175,14 @@ const computerPlay = () => {
 
 const openCustomPrompt = () => {
     document.getElementById('custom-prompt').style.display = 'block';
+    const customPrompt = document.getElementById('custom-prompt');
+    customPrompt.style.display = 'block';
+    addCloseButton();
 }
 
 const closeCustomPrompt = () => {
     document.getElementById('custom-prompt').style.display = 'none';
+    
 }
 
 const addCloseButton = () => {
@@ -254,7 +260,6 @@ const playRound = (playerSelection, computerSelection, round) => {
  
 
 
-
     return result;
 }
 
@@ -280,7 +285,6 @@ const gameWithCustomPrompt = async () => {
         const roundResult = playRound(playerSelection.toLowerCase(), computerSelection, i + 1);
         gameResults.push({ player: playerSelection, computer: computerSelection, result: roundResult });
     }
-
     displayScores(gameResults);
 
     const gameResultMessage = document.createElement('p');
@@ -301,8 +305,11 @@ const gameWithCustomPrompt = async () => {
     promptContent.innerHTML = ''; 
 
     promptContent.appendChild(gameResultMessage);
-    return gameResults;
-}
+   
+    addCloseButton();
+
+    //return gameResults;
+//}
 
 
 
@@ -368,16 +375,17 @@ document.getElementById('start-button').addEventListener('click', async () => {
 
 
 
-
  // Hide player and computer images for final message
- playerElementImage.style.display = 'none';
- computerElementImage.style.display = 'none';
+ //playerElementImage.style.display = 'none';
+ //computerElementImage.style.display = 'none';
+ document.getElementById('player-element-image').style.display = 'none';
+    document.getElementById('computer-element-image').style.display = 'none';
 
 // Add this after the gameResultMessage.textContent is set
 const videoContainer = document.createElement('div');
 videoContainer.classList.add('video-container');
 videoContainer.style.width = '50%'; 
-videoContainer.style.display = 'none';
+//videoContainer.style.display = 'none';
 
 let videoSource;
 
@@ -397,7 +405,11 @@ videoElement.muted = true;
 videoElement.style.width = '100%'; 
 
 videoContainer.appendChild(videoElement);
-document.querySelector('.prompt-content').appendChild(videoContainer);
+//document.querySelector('.prompt-content').appendChild(videoContainer);
+promptContent.appendChild(videoContainer);
+
+return gameResults;
+}
 
 
 
