@@ -141,6 +141,17 @@ footer.innerHTML = '&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALM
  });
 
 
+
+ 
+
+
+
+
+
+
+ 
+
+
  
  document.getElementById('start-button').addEventListener('click', async () => {
      await gameWithCustomPrompt();
@@ -177,7 +188,7 @@ const openCustomPrompt = () => {
     document.getElementById('custom-prompt').style.display = 'block';
     const customPrompt = document.getElementById('custom-prompt');
     customPrompt.style.display = 'block';
-    addCloseButton();
+   //addCloseButton();
 }
 
 const closeCustomPrompt = () => {
@@ -265,8 +276,8 @@ const playRound = (playerSelection, computerSelection, round) => {
 
 const getCustomInput = () => {
     return new Promise(resolve => {
-        openCustomPrompt();
-       // addCloseButton();
+          openCustomPrompt();
+       //addCloseButton();
 
         document.querySelectorAll('.element-button').forEach(button => {
             button.addEventListener('click', () => {
@@ -278,6 +289,7 @@ const getCustomInput = () => {
 }
 
 const gameWithCustomPrompt = async () => {
+  
     let gameResults = [];
     for (let i = 0; i < 5; i++) {
         const playerSelection = await getCustomInput();
@@ -306,7 +318,7 @@ const gameWithCustomPrompt = async () => {
 
     promptContent.appendChild(gameResultMessage);
    
-    addCloseButton();
+    //addCloseButton();
 
     //return gameResults;
 //}
@@ -343,7 +355,8 @@ document.getElementById('rules-link').addEventListener('click', () => {
 
 document.getElementById('scores-link').addEventListener('click', () => {
     openScoresPopup(); 
-});
+})
+
 
 
 
