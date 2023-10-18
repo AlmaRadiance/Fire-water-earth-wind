@@ -1,3 +1,22 @@
+ // Define the openPopup and closePopup functions
+function openPopup() {
+    document.getElementById('popup-container').style.display = 'block';
+}
+
+function closePopup() {
+    document.getElementById('popup-container').style.display = 'none';
+}
+
+function openScoresPopup() {
+    document.getElementById('scores-popup').style.display = 'block';
+}
+
+function closeScoresPopup() {
+    document.getElementById('scores-popup').style.display = 'none';
+}
+
+
+ 
  // Create the header content
  const header = document.createElement('header');
  header.classList.add('header');
@@ -58,15 +77,21 @@ footer.innerHTML = '&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALM
  gameRulesPopup.classList.add('popup');
  const gameRulesPopupContent = document.createElement('div');
  gameRulesPopupContent.classList.add('popup-content');
- const closeGameRulesPopup = document.createElement('span');
- closeGameRulesPopup.classList.add('close-popup');
+ const closeGameRulesPopup = document.createElement('button');
+ closeGameRulesPopup.classList.add('close-button');
  closeGameRulesPopup.setAttribute('onclick', 'closePopup()');
- closeGameRulesPopup.innerHTML = '&times;';
+ closeGameRulesPopup.textContent = 'Close';
+ closeGameRulesPopup.style.position = 'absolute';
+ closeGameRulesPopup.style.top = '10px';
+ closeGameRulesPopup.style.right = '10px';
+
  gameRulesPopupContent.appendChild(closeGameRulesPopup);
  const gameRulesHeading = document.createElement('h2');
  gameRulesHeading.innerText = 'Game Rules';
  const gameRulesText = document.createElement('p');
  gameRulesText.style.fontWeight = 'normal';
+ gameRulesText.style.fontSize = '18px'; 
+ gameRulesText.style.color='black';
  gameRulesText.innerHTML = `Welcome to the Rock-Paper-Scissors Game!
                           <h3>Rules</h3>
                           Get ready for a classic game of Rock-Paper-Scissors against the computer!
@@ -116,6 +141,9 @@ footer.innerHTML = '&copy; 2023 ROCK-PAPER-SCISSORS - THE ODIN PROJECT | BY: ALM
  closeScoresPopupButton.setAttribute('onclick', 'closeScoresPopup()');
  closeScoresPopupButton.innerText = 'Close';
  scoresPopupContent.appendChild(closeScoresPopupButton);
+ closeScoresPopupButton.style.position = 'absolute';
+ closeScoresPopupButton.style.top = '10px';
+ closeScoresPopupButton.style.right = '10px';
  
  // Append elements to the body
  document.body.appendChild(header);
@@ -196,13 +224,32 @@ const closeCustomPrompt = () => {
     
 }
 
-const addCloseButton = () => {
+/*const addCloseButton = () => {
     const closeButton = document.createElement('span');
     closeButton.className = 'close-button';
     closeButton.innerHTML = '&times;';
     closeButton.onclick = closeCustomPrompt;
     document.querySelector('.custom-prompt').appendChild(closeButton);
-}
+}*/
+const customPromptCloseButton = document.createElement('button');
+customPromptCloseButton.classList.add('close-button');
+customPromptCloseButton.textContent = 'Close';
+customPromptCloseButton.addEventListener('click', closeCustomPrompt);
+document.getElementById('custom-prompt').appendChild(customPromptCloseButton);
+
+customPromptCloseButton.style.position = 'absolute';
+customPromptCloseButton.style.top = '10px';
+customPromptCloseButton.style.right = '10px';
+
+
+
+
+
+
+
+
+
+
 
 const playRound = (playerSelection, computerSelection, round) => {
     let result;
@@ -291,7 +338,7 @@ const getCustomInput = () => {
 const gameWithCustomPrompt = async () => {
   
     let gameResults = [];
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
         const playerSelection = await getCustomInput();
         const computerSelection = computerPlay();
         const roundResult = playRound(playerSelection.toLowerCase(), computerSelection, i + 1);
@@ -310,7 +357,6 @@ const gameWithCustomPrompt = async () => {
     } else {
         gameResultMessage.textContent = `It's a tie!`;
         document.getElementById('tie-sound').play(); // Play tie sound
-
     }
 
     const promptContent = document.querySelector('.prompt-content');
@@ -326,22 +372,32 @@ const gameWithCustomPrompt = async () => {
 
 
 
+
+
+
+
+
 // Opening and closing popup windows
-function openPopup() {
-    document.getElementById('popup-container').style.display = 'block';
-}
+//function openPopup() {
+    //document.getElementById('popup-container').style.display = 'block';
+//}
 
-function closePopup() {
-    document.getElementById('popup-container').style.display = 'none';
-}
+//function closePopup() {
+   // document.getElementById('popup-container').style.display = 'none';
+//}
 
-function openScoresPopup() {
+/*function openScoresPopup() {
     document.getElementById('scores-popup').style.display = 'block';
 }
 
 function closeScoresPopup() {
     document.getElementById('scores-popup').style.display = 'none';
-}
+}*/
+
+
+
+
+
 
 
 
@@ -376,6 +432,13 @@ function displayScores(gameResults) {
 
     document.querySelector('#scores-popup .popup-content').innerHTML = tableHTML;
 }
+
+
+
+
+
+
+
 
 // Call the gameWithCustomPrompt function when the button is clicked
 document.getElementById('start-button').addEventListener('click', async () => {

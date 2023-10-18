@@ -210,6 +210,7 @@ width: 100%;
 height: 100%;
 overflow: auto;
 background-color: rgba(0,0,0,0.5);
+font-size: 18px;
 }
 
 .popup-content {
@@ -246,7 +247,8 @@ transition: transform 0.3 ease;
 }
 
 
-/* Add this CSS to style the elements with videos */
+
+/*elements with videos */
 .elements ul {
 list-style-type: none;
 padding: 0;
@@ -269,6 +271,13 @@ margin: 0 auto 10px;
 
 .elements ul li p {
 margin: 0;
+font-size: 18px;
+color: black;
+}
+
+h3 {
+  font-size: 20px;
+  color: black;
 }
 
 .img-bounce {
@@ -281,7 +290,7 @@ margin: 0;
     transform: translateY(0); /* Start and end position, no translation */
   }
   50% {
-    transform: translateY(-10px); /* Midway, move up 10 pixels */
+    transform: translateY(-10px); 
   }
 }
 
